@@ -13,10 +13,10 @@ class Sorter
      * @param $array
      * @param SortStrategyInterface $strategy
      */
-    public function __construct($array, SortStrategyInterface $strategy)
+    public function __construct($array, SortStrategyInterface $strategy = null)
     {
         $this->data     = $array;
-        $this->strategy = $strategy;
+        $this->strategy = $strategy ?? new NullSortStrategy();
     }
 
     /**

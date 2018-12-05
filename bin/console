@@ -16,3 +16,6 @@ echo ($srt . "\n");
 $srt->setSortStrategy(new DescSortStrategy());
 var_dump($srt->sort());
 echo ($srt . "\n");
+
+$nullSrt = new Sorter($testArray, null);
+echo ($nullSrt . "\n");
