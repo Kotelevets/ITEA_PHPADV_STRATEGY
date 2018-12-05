@@ -9,8 +9,5 @@ interface SortStrategyInterface
      * @param $data
      * @return array
      */
-    public function sort($data): array
-    {
-
-    }
+    public function sort($data): array;
 }

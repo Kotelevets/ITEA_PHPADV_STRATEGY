@@ -3,4 +3,16 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use Kotyaaa\Strategy\Sorter;
+use Kotyaaa\Strategy\AscSortStrategy;
+use Kotyaaa\Strategy\DescSortStrategy;
 
+$testArray = [3, 5, 8, 90, 125, 4, 43, 16];
+$srt = new Sorter($testArray, new AscSortStrategy());
+
+var_dump($srt->sort());
+echo ($srt . "\n");
+
+$srt->setSortStrategy(new DescSortStrategy());
+var_dump($srt->sort());
+echo ($srt . "\n");

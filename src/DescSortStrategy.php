@@ -10,8 +10,9 @@ class DescSortStrategy implements SortStrategyInterface
      * @param $data
      * @return array
      */
-    protected function sort($data): array
+    public function sort($data): array
     {
-        return \arsort($data);
+        \arsort($data);
+        return $data;
     }
 }

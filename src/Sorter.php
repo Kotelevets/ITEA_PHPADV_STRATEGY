@@ -20,11 +20,12 @@ class Sorter
     }
 
     /**
-     *
+     * @return array
      */
-    public function sort()
+    public function sort(): array
     {
-        $this->strategy->sort($this->data);
+        $this->data = $this->strategy->sort($this->data);
+        return $this->data;
     }
 
     /**
@@ -36,18 +37,10 @@ class Sorter
     }
 
     /**
-     * @return array
-     */
-    public function getResult(): array
-    {
-        return $this->data;
-    }
-
-    /**
      * @return string
      */
     public function __toString()
     {
-        return \implode($this->data);
+        return \implode(", ", $this->data);
     }
 }

@@ -10,8 +10,9 @@ class AscSortStrategy implements SortStrategyInterface
      * @param $data
      * @return array
      */
-    protected function sort($data): array
+    public function sort($data): array
     {
-        $return \asort($data);
+        \asort($data);
+        return $data;
     }
 }
